@@ -28,7 +28,7 @@ var data = {
 var res = {
     status  :[Number],   //状态 1：成功  0：失败
     message :[String],  //返回描述信息
-    data    :[String token]
+    data    :[String]   //这是一个token 需要将它放入请求头 每次调用接口时需要将 这个token字段传入
 }
 ```
 
