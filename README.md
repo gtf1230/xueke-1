@@ -1,5 +1,3 @@
-# xueke
-本大爷的接口文档
 ### 测试账号
 
 接口路径：192.168.1.43:7001
@@ -28,8 +26,8 @@ var data = {
 var res = {
     status  :[Number],   //状态 1：成功  0：失败
     message :[String],  //返回描述信息
-    data    :[String]   //这是一个token 需要将它放入请求头 每次调用接口时需要将 这个token字段传入
-}
+    data    :'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYXZhdG9yX25hbWUiOiLmtYvor5Xlj7ciLCJhZ2UiOjE4LCJzZXgiOiIxIiwiYXZhdG9yX2ltZyI6IjAiLCJjbGFzc19pZCI6MCwiZGVzY3JpcHRpb24iOiLkuIDkuKrnroDnroDljZXljZXnmoTmtYvor5Xlj7ciLCJwaG9uZSI6IjEyMzQ1Njc4OTExIiwiZW1haWwiOiIxNTAwNjc5NTk4QHFxLmNvbSIsImlhdCI6MTYzNzY1NzM3NywiZXhwIjoxNjM3NjU5MTc3fQ.U4vtTCwUxMH5HzpwmHBNLLPHWlz3QpNc1eJ7E9ODjkM'
+}   //该数据是一个Token，在请求接口时，传到请求头中，请求头的字段为authorization;
 ```
 
 ### 获取验证码
