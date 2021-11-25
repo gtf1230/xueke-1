@@ -52,12 +52,8 @@ var res = {
 var data = {
     username:[String], //账号 //必填
     password:[String], //密码 //必填
-    avator_name:[String],//个人名称 //非必填
     age:[Number],//年龄 //非必填
     sex:[char], //0.女,1.男 // 默认为1  //非必填
-    avator_img:[String], //头像索引  暂未增加上传头像
-    class_id:[Number],//班级的ID //非必填	
-    description:[String],//个人描述 //非必填
     email	:[String], //邮箱 //必填
     phone	:[String], //手机号 //必填
 ```
