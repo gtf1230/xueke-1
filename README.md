@@ -83,18 +83,41 @@ var res = {
     msg		:[String],
     data	:{
         id:[Number],//个人id
-        avator_name:[String],//个人名称 //非必填
+        avatorName:[String],//个人名称 //非必填
         age:[Number],//年龄 //非必填
         sex:[char], //0.女,1.男 // 默认为1  //非必填
-        avator_img:[String], //头像索引  暂未增加上传头像
-        class_id:[Number],//班级的ID //非必填
+        avatorImg:[String], //头像索引  暂未增加上传头像
+        classId:[Number],//班级的ID //非必填
         description:[String],//个人描述 //非必填
         phone:[String],//手机号 
         email:[String],//个人邮箱 
-        updated_at:[timestamp],//用户修改信息时间   timestamp:时间戳
-        created_at:[timestamp],//用户账号创建时间
-        login_time:[timestamp]//用户上次登录时间
+        updatedAt:[timestamp],//用户修改信息时间   timestamp:时间戳
+        createdAt:[timestamp],//用户账号创建时间
+        loginTime:[timestamp]//用户上次登录时间
     }
 }
+```
+
+### 获取任务列表
+
+1.接口名：'/task/list';
+
+2.类型：'post';
+
+3.入参：{}
+
+4.出参
+
+```js
+var res = {
+    status  :[Number],
+    msg		:[String],
+    data	:{
+        taskId :[Number],   	// 该数据的ID
+        taskName:[String], 		// 该数据的名字
+        pid :[Number],		//作业父级的id  如果为null 那么为最高级的作业  如果不为null 则该任务在task_id 为parent_id 的做作业下挂载
+        updatedAt:[timestamp], 	// 修改时间
+        createdAt:[timestamp]	// 创建时间
+    }
 ```
 
