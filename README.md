@@ -123,7 +123,7 @@ var res = {
 
 ####  领任务接口
 
-1. 接口名 ：/mine/task/list;
+1. 接口名 ：'/lead/task';
 
 
 2. 类型 ：  'POST'
@@ -152,3 +152,73 @@ var res = {
     	data	:[]
     }
 ```
+
+
+
+### 查询自己的任务列表
+
+1.接口名:'/mine/task/list'
+
+2. 类型 ：  'POST'
+
+
+3. 描述：此接口用来查询自己接受过的任务列表
+
+
+4. 入参: {} //该接口需要登录   需要用到请求头中的token
+
+5. 出参：
+
+   ```js
+   var res = {
+   		status  :[Number],
+       	msg		:[String],
+       	data	:{
+               id:[Number],
+               task_status:[String], //该任务目前的状态  0 未开始  1 已开始  2进行中 3已完成 4已超时
+               score:[Number], // 任务的评分 1:优 2：良 3：中 4：差
+               progress:[Number],// 任务的完成度 返回的数字  渲染时自己在后面拼接上% 
+   			updatedAt:[timestamp], 	// 修改时间
+           	createdAt:[timestamp]	// 创建时间
+           }
+       }
+   ```
+
+   ### 查询所有人的任务列表
+
+   1.接口名:''/user/task/list'
+
+   2. 类型 ：  'POST'
+
+
+   3. 描述：此接口用来查询所有人的任务列表
+
+
+   4. 入参: {
+
+       pageSize: [Number] //默认为10
+
+       pageNum: [Number] //默认为1
+
+      } 
+
+   5. 出参：
+
+      ```js
+      var res = {
+      		status  :[Number],
+          	msg		:[String],
+          	data	:{
+                  id:[Number],
+                  task_status:[String], //该任务目前的状态  0 未开始  1 已开始  2进行中 3已完成 4已超时
+                  score:[Number], // 任务的评分 1:优 2：良 3：中 4：差
+                  progress:[Number],//任务的完成度 返回的数字  渲染时自己在后面拼接上% 
+      			updatedAt:[timestamp], 	// 修改时间
+              	createdAt:[timestamp]	// 创建时间
+              }
+          }
+      ```
+
+      
+
+   
