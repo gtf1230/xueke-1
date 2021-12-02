@@ -73,11 +73,9 @@ var res = {
 
 1.接口名：'/user/info';
 
-2.类型：'post';
+2.类型：'get';
 
-3.入参：'{}'   //需要将登陆接口(/user/login)返回的token 存放入 请求头中;
-
-4.出参：
+3.出参：
 
 ```js
 var res = {
@@ -123,3 +121,34 @@ var res = {
     }
 ```
 
+####  领任务接口
+
+1. 接口名 ：/mine/task/list;
+
+
+2. 类型 ：  'POST'
+
+
+3. 描述：此接口用来进行领取任务
+
+
+4. 入参: 
+
+
+```
+	var data ={
+		taskId:[Number] //领取的任务id
+	}
+```
+
+
+5. 出参：
+
+
+```
+	var res = {
+		status  :[Number],
+    	msg		:[String],
+    	data	:[]
+    }
+```
