@@ -286,5 +286,34 @@ var res = {
     }
 ```
 
+### 10.批改任务
+
+
+1.接口名:'/correct/task'
+
+
+2.类型 ：'POST'
+
+
+3.描述：此接口用来修改任务的完成度还有评分
+
+
+4.入参:
+```js
+{
+      score:[Number],  // 任务的评分 1:优 2：良 3：中 4：差
+      progress:[Number],//任务的完成度 
+      taskId: [Number]        //任务的id
+      userId: [Number]        //用户的userId
+} 	
+```
+5. 出参
+```js
+var res = {
+	status  :[Number],
+    	msg	:[String],
+    	data	:[]
+    }
+```
 
 
