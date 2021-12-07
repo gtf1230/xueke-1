@@ -264,13 +264,13 @@ var res = {
 
 avatorName:[String],   //用户昵称
 
-age :[int] , //用户年龄
+age :[Number] , //用户年龄
 
-sex:[int] , //用户性别  //1男 0女
+sex:[Number] , //用户性别  //1男 0女
 
-avatorImg:[int] , //用户头像 
+avatorImg:[Number] , //用户头像 
 
-classId:[int], //班级的id
+classId:[Number], //班级的id
 
 description:[String],//个性签名
 
