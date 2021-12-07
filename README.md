@@ -121,7 +121,7 @@ var res = {
     }
 ```
 
-###  领任务接口
+####  领任务接口
 
 1. 接口名 ：'/lead/task';
 
@@ -191,14 +191,14 @@ var res = {
    2. 类型 ：  'POST'
 
 
-   3. 描述：此接口用来查询所有人的任务列表
+      3. 描述：此接口用来查询所有人的任务列表
 
 
    4. 入参: {
 
-       pageSize: [Number] //默认为10
+      pageSize: [Number] //默认为10
 
-       pageNum: [Number] //默认为1
+      pageNum: [Number] //默认为1
 
       } 
 
@@ -221,4 +221,70 @@ var res = {
 
       
 
-   
+ ### 查询该任务有多少人领取
+
+1.接口名:'/task/detail'
+
+2.类型 ：  'POST'
+
+3.描述：此接口用来查询该任务有多少人领取过
+
+4.入参: {
+
+taskId:[Number]  //任务的ID
+
+} 
+
+5.出参：
+
+```js
+var res = {
+		status  :[Number],
+    	msg		:[String],
+    	data	:{
+            id:[Number],
+            task_status:[String], //该任务目前的状态  0 未开始  1 已开始  2进行中 3已完成 4已超时
+            score:[Number], // 任务的评分 1:优 2：良 3：中 4：差
+            progress:[Number],//任务的完成度 返回的数字  渲染时自己在后面拼接上% 
+			updatedAt:[timestamp], 	// 修改时间
+        	createdAt:[timestamp]	// 创建时间
+        }
+    }
+```
+
+### 修改用户信息接口
+
+1.接口名:'/update/user/info'
+
+2.类型 ：  'POST'0
+
+3.描述：此接口用来修改用户的信息
+
+4.入参: {
+
+avatorName:[String],   //用户昵称
+
+age :[int] , //用户年龄
+
+sex:[int] , //用户性别  //1男 0女
+
+avatorImg:[int] , //用户头像 
+
+classId:[int], //班级的id
+
+description:[String],//个性签名
+
+phone:[String]//手机号码        以上都是选填
+
+} 	
+
+```js
+var res = {
+		status  :[Number],
+    	msg		:[String],
+    	data	:[]
+    }
+```
+
+
+
